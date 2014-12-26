@@ -1,5 +1,5 @@
 window.onload = function(){
-  var body;
+  var body, lasttime;
 
   function getLarsTime(date){
     date = date || new Date();
@@ -19,10 +19,17 @@ window.onload = function(){
   }
 
   function updateLarsTime(){
-    body.innerHTML = '<span>' + formatLarsTime() + '</span>';
+    var thistime;
+
+    thistime = formatLarsTime();
+    
+    if (lasttime !== thistime){
+      lasttime = thistime;
+      body.innerHTML = '<span>' + thistime + '</span>';
+    }
   }
 
   body = document.getElementsByTagName('body')[0];
 
-  setInterval(updateLarsTime, 100);
+  setInterval(updateLarsTime, 10);
 };
