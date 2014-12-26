@@ -1,6 +1,18 @@
+html {
+    height: 100%;
+}
+
 body {
+    display: table;
     font-family: monospace;
     text-align: center;
     height: 100%;
+    width: 100%;
     font-size: 150px;
+    overflow: hidden;
+}
+
+span {
+    display: table-cell;
+    vertical-align: middle;
 }

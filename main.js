@@ -19,7 +19,7 @@ window.onload = function(){
   }
 
   function updateLarsTime(){
-    body.innerHTML = formatLarsTime();
+    body.innerHTML = '<span>' + formatLarsTime() + '</span>';
   }
 
   body = document.getElementsByTagName('body')[0];
