@@ -10,7 +10,7 @@ window.onload = function(){
   function formatLarsTime(larstime){
     larstime = larstime || getLarsTime();
 
-    larstime = Math.floor(larstime);
+    larstime = String(Math.floor(larstime));
     while (larstime.length < 5) {
       larstime = '0' + larstime;
     }
